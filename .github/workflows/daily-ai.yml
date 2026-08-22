@@ -2,7 +2,7 @@ name: 每日 AI 日报
 
 on:
   schedule:
-    # UTC 01:00 = 北京时间 09:00
+    # GitHub 使用 UTC；UTC 01:00 = 北京时间 09:00
     - cron: "0 1 * * *"
   workflow_dispatch:
 
@@ -30,6 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WXPUSHER_APP_TOKEN: ${{ secrets.WXPUSHER_APP_TOKEN }}
           WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: python scripts/daily_ai.py
 
       - name: 保存日报
