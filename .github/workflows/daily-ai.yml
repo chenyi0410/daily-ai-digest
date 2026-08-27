@@ -3,7 +3,7 @@ name: 每日 AI 日报
 on:
   schedule:
     # GitHub 使用 UTC；UTC 01:00 = 北京时间 09:00
-    - cron: "26 2 * * *"
+    - cron: "31 22 * * *"
   workflow_dispatch:
 
 permissions:
